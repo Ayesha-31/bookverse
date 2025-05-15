@@ -1,0 +1,64 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fefefe;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #6741d9;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+section {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.book-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #6741d9;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #5936bd;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f3f0ff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #999;
+  padding: 1rem;
+}

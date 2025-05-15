@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BookVerse – Your AI Reading Companion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📚 BookVerse</h1>
+    <p>Discover books you'll love – powered by AI</p>
+  </header>
+
+  <section class="book-form">
+    <h2>Add a Book</h2>
+    <form id="bookForm">
+      <input type="text" id="title" placeholder="Book Title" required>
+      <input type="text" id="author" placeholder="Author" required>
+      <input type="text" id="genre" placeholder="Genre">
+      <textarea id="review" placeholder="Your thoughts..."></textarea>
+      <button type="submit">Add to Shelf</button>
+    </form>
+  </section>
+
+  <section class="book-list">
+    <h2>📖 My Bookshelf</h2>
+    <ul id="bookShelf"></ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BookVerse by Ayesha Shaik</p>
+  </footer>
+
+  <script>
+    const bookForm = document.getElementById('bookForm');
+    const bookShelf = document.getElementById('bookShelf');
+
+    bookForm.onsubmit = (e) => {
+      e.preventDefault();
+      const title = document.getElementById('title').value;
+      const author = document.getElementById('author').value;
+      const genre = document.getElementById('genre').value;
+      const review = document.getElementById('review').value;
+
+      const entry = document.createElement('li');
+      entry.innerHTML = `<strong>${title}</strong> by ${author} (${genre})<br><em>${review}</em>`;
+      bookShelf.appendChild(entry);
+
+      bookForm.reset();
+    };
+  </script>
+</body>
+</html>
